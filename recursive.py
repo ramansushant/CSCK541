@@ -2,6 +2,7 @@ def recursive_floyd_warshall(dist):
 	v = len(graph)
 	indices = range(v)
 
+# compute all-pairs shortest paths
 	for i in indices:
 		for j in indices:
 			if i == j:
@@ -11,7 +12,7 @@ def recursive_floyd_warshall(dist):
 	return dist
 
 
-# Function to calculate the shortest path between
+# Finds the shortest path from i to j using only vertices 0 through k as intermediaries
 def shortestpath(i, j, k, dist):
 	if k < 0:
 		return (dist[i][j])
