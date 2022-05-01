@@ -15,7 +15,7 @@ def recursive_floyd_warshall(dist):
 # Finds the shortest path from i to j using only vertices 0 through k as intermediaries
 def shortestpath(i, j, k, dist):
 	if k < 0:
-		return (dist[i][j])
+		return dist[i][j]
 	else:
 		return min(shortestpath(i, j, k - 1, dist), shortestpath(i, k, k - 1, dist) + shortestpath(k, j, k - 1, dist))
 
